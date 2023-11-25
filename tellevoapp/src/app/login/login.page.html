@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>
+      Iniciar Sesión
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+  <ion-item>
+
+    <ion-label position="floating" >Usuario</ion-label>
+    <ion-input fill="solid" errorText="Campo Obligatorio"
+    [(ngModel)]="logindata.username" name="username"></ion-input>
+
+    
+
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Contraseña</ion-label>
+    <ion-input type="password" [(ngModel)]="logindata.password" name="password"></ion-input>
+  </ion-item>
+  <ion-button expand="block" color="dark" routerLink="/login" (click)="login()" >Ingresar</ion-button>
+  <ion-button expand="block" color="dark" routerLink="/recuperar">Recuperar</ion-button>
+
+  <!-- Mensaje de error -->
+
+  <div *ngIf="errorMessage" class="error-message"> 
+    {{ errorMessage }}
+  </div>
+</ion-content>

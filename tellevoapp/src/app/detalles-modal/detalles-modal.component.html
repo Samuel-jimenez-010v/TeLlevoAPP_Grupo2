@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalles del Viaje</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrarModal()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Contenido detallado del viaje aquí -->
+  <h2>{{ nombreConductor }}</h2>
+  <p>Destino: {{ viaje.destino }}</p>
+  <p>Capacidad de transporte: {{ viaje.capacidad}}</p>
+  <p>Hora de salida: {{ viaje.horarioSalida }}</p>
+  <p>Costo por persona: ${{ viaje.costoPorPersona }}</p>
+  <!-- Puedes agregar más detalles según sea necesario -->
+  <ion-button (click)="confirmarViaje(viaje)">Confirmar</ion-button>
+</ion-content>

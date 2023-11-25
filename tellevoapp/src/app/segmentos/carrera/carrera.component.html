@@ -1,0 +1,27 @@
+<div class="ion-text-center">
+  <h2>Viajes Disponibles</h2>
+</div>
+
+<ion-content>
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content refreshingText="Actualizando Lista..."></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list *ngIf="viajes.length > 0">
+    <ion-item *ngFor="let viaje of viajes">
+      <ion-thumbnail slot="start">
+        <ion-icon name="people-outline"></ion-icon>
+      </ion-thumbnail>
+      <ion-label>
+        <p>Destino: {{ viaje.destino }}</p>
+        <p>Capacidad: {{viaje.capacidad}}</p>
+        <p>Costo por persona: ${{ viaje.costoPorPersona }}</p>
+      </ion-label>
+      <ion-button (click)="verDetalles(viaje)">Detalle</ion-button>
+    </ion-item>
+  </ion-list>
+  
+  <ion-note *ngIf="viajes.length === 0">No hay viajes disponibles.</ion-note>
+</ion-content>
+

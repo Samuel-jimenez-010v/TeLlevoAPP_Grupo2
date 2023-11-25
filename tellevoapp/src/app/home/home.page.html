@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title #title>
+      TeLlevoApp :D
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-segment [scrollable]="true" value="heart" (ionChange)="segmentChanged($event)">
+  <ion-segment-button value="carrera">
+    <ion-icon name="bus-outline"></ion-icon>
+    <ion-label>Opciones de Viajes</ion-label>
+  </ion-segment-button>
+
+  <ion-segment-button value="usuario">
+    <ion-label>Home</ion-label>
+    <ion-icon name="home"></ion-icon>
+  </ion-segment-button>
+
+  <ion-segment-button value="viajes">
+    <ion-icon name="globe"></ion-icon>
+    <ion-label>Registrar Viaje</ion-label>
+  </ion-segment-button>
+</ion-segment>
+
+<ion-content>
+  <ion-router-outlet></ion-router-outlet>
+</ion-content>
+

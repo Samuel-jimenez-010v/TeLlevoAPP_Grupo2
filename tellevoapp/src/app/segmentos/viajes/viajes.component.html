@@ -1,0 +1,30 @@
+<div class="ion-text-center">
+  <h2>Registrar Viaje</h2>
+</div>
+
+
+<ion-item>
+  <ion-select placeholder="Selecciona tu Destino" [(ngModel)]="destinoSeleccionado">
+    <div slot="label">Destinos</div>
+    <ion-select-option *ngFor="let destino of destinos" [value]="destino">{{ destino }}</ion-select-option>
+  </ion-select>
+</ion-item>
+
+<ion-item>
+  <ion-label position="stacked">Capacidad de Transporte</ion-label>
+  <ion-input type="number" [(ngModel)]="capacidad"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label>Horario de Salida:</ion-label>
+  <ion-input type="time" [(ngModel)]="horaSalida"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label>Costo por Persona: $</ion-label>
+  <ion-input  type="number" [(ngModel)]="costoPorPersona"></ion-input>
+</ion-item>
+
+
+<ion-button expand="block" color="dark" (click)="crearViaje()">Crear Viaje</ion-button>
+
