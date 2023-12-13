@@ -1,0 +1,41 @@
+ion-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #87CEEB; /* Color celeste de fondo */
+    transition: background-color 0.3s ease; /* Agregamos una transición para suavizar el cambio de color */
+  }
+  
+  ion-content:hover {
+    background-color: #0000FF; /* Cambia a azul cuando pasa el mouse */
+  }
+  
+  ion-item {
+    width: 80%;
+    margin-top: 16px;
+  }
+  
+  ion-label {
+    font-size: 1.5em;
+  }
+  
+  ion-input {
+    font-size: 1.2em;
+  }
+  
+  ion-button {
+    width: 80%;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 1.2em;
+    margin-top: 8px;
+  }
+  
+  .error-border {
+    border: 2px solid red; /* Cambia el borde a rojo si hay un error */
+  }
+  
